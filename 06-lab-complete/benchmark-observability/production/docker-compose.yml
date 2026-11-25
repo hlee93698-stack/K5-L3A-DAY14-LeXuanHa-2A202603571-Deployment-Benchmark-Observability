@@ -20,6 +20,7 @@ services:
   agent:
     build: .
     environment:
+      - PYTHONPATH=/app:/home/agent/.local/lib/python3.11/site-packages
       - ENVIRONMENT=lab
       - AGENT_VERSION=${AGENT_VERSION:-v2}
       - LLM_MODEL=${LLM_MODEL:-mock-llm-small}
